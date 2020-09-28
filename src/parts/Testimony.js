@@ -24,7 +24,6 @@ export default function Testimony({ data }) {
               style={{ margin: `-30px 0 0 -30px` }}
             />
           </div>
-          span.style
         </div>
         <div className='col'>
           <h4 style={{ marginBottom: 40 }}>{data.name}</h4>
