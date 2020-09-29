@@ -16,6 +16,7 @@ class LandingPage extends Component {
   }
 
   render() {
+    console.log(this.refMostPicked);
     return (
       <>
         <Header {...this.props}></Header>
