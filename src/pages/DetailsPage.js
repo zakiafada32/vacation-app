@@ -5,6 +5,10 @@ import Header from 'parts/Header';
 import PageDetailTitle from 'parts/PageDetailTitle';
 import FeaturedImage from 'parts/FeaturedImage';
 import PageDetailDescription from 'parts/PageDetailDescription';
+import BookingForm from 'parts/BookingForm';
+import Activities from 'parts/Activities';
+import Testimony from 'parts/Testimony';
+import Footer from 'parts/Footer';
 
 import itemDetails from 'json/itemDetails';
 
@@ -32,9 +36,21 @@ class DetailsPage extends Component {
                 <PageDetailDescription data={itemDetails} />
               </Fade>
             </div>
-            <div className='col-5'></div>
+            <div className='col-5'>
+              <Fade bottom>
+                <BookingForm
+                  itemDetails={itemDetails}
+                  startBooking={this.props.checkoutBooking}
+                />
+              </Fade>
+            </div>
           </div>
         </section>
+
+        <Activities data={itemDetails.activities} />
+        <Testimony data={itemDetails.testimonial} />
+
+        <Footer />
       </>
     );
   }
