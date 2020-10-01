@@ -47,7 +47,7 @@ class DetailsPage extends Component {
           </div>
         </section>
 
-        <Activities data={itemDetails.activities} />
+        <Activities data={itemDetails.categories[0].items} />
         <Testimony data={itemDetails.testimonial} />
 
         <Footer />

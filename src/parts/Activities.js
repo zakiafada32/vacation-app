@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 import Button from 'elements/Button';
 
 export default function Activities({ data }) {
+  console.log(data);
   if (data.length === 0) return null;
 
   return (

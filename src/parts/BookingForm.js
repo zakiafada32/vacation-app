@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { withRouter } from "react-router-dom";
 
 import propTypes from 'prop-types';
 
@@ -138,5 +137,4 @@ BookingForm.propTypes = {
   startBooking: propTypes.func,
 };
 
-// export default withRouter(BookingForm);
 export default BookingForm;
