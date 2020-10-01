@@ -8,7 +8,7 @@ import Button from 'elements/Button';
 
 export default function Testimony({ data }) {
   return (
-    <Fade>
+    <Fade bottom>
       <section className='container'>
         <div className='row align-items-center'>
           <div className='col-auto' style={{ marginRight: 60 }}>

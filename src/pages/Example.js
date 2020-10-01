@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-// import InputNumber from 'elements/Form/InputNumber';
+import InputNumber from 'elements/Form/InputNumber';
 // import InputDate from 'elements/Form/InputDate';
-import Breadcrumb from 'elements/Breadcrumb';
+// import Breadcrumb from 'elements/Breadcrumb';
 
 // example input number
-/* export default class Example extends Component {
+export default class Example extends Component {
   state = {
     value: '1',
   };
@@ -23,6 +23,7 @@ import Breadcrumb from 'elements/Breadcrumb';
             <InputNumber
               max={30}
               suffix=' night'
+              isSuffixPlural
               onChange={this.handleChange}
               name='value'
               value={this.state.value}
@@ -32,8 +33,7 @@ import Breadcrumb from 'elements/Breadcrumb';
       </div>
     );
   }
- }
-*/
+}
 
 // example input date
 /* export default class Example extends Component {
@@ -70,7 +70,7 @@ import Breadcrumb from 'elements/Breadcrumb';
 */
 
 // example breadcrumb
-export default class Example extends Component {
+/*export default class Example extends Component {
   render() {
     const breadcrumb = [
       { pageTitle: 'Home', pageHref: '' },
@@ -91,3 +91,4 @@ export default class Example extends Component {
     );
   }
 }
+*/

@@ -1,11 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import propTypes from 'prop-types';
 import './index.scss';
 
 export default function Number(props) {
-  const { value, placeholder, name, min, max, prefix, suffix } = props;
+  const {
+    value,
+    placeholder,
+    name,
+    min,
+    max,
+    prefix,
+    suffix,
+    isSuffixPlural,
+  } = props;
 
-  const [InputValue, setInputValue] = useState(`${prefix}${value}${suffix}`);
+  const [InputValue, setInputValue] = useState(
+    `${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? 's' : ''}`
+  );
+
+  useEffect(() => {
+    setInputValue(
+      `${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? 's' : ''}`
+    );
+  }, [prefix, value, suffix, isSuffixPlural]);
 
   const onChange = (e) => {
     let value = String(e.target.value);
@@ -22,7 +39,9 @@ export default function Number(props) {
           value: +value,
         },
       });
-      setInputValue(`${prefix}${value}${suffix}`);
+      setInputValue(
+        `${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? 's' : ''}`
+      );
     }
   };
 
@@ -53,6 +72,7 @@ export default function Number(props) {
           </span>
         </div>
         <input
+          readOnly
           min={min}
           max={max}
           name={name}
@@ -84,4 +104,5 @@ Number.propTypes = {
   onChange: propTypes.func,
   placeholder: propTypes.string,
   outerClassName: propTypes.string,
+  isSuffixPlural: propTypes.bool,
 };
