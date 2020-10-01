@@ -8,8 +8,8 @@ export default function Categories({ data }) {
     if (category.items.length === 0) return null;
 
     return (
-      <Fade bottom>
-        <section className='container' key={`category-${index1}`}>
+      <section className='container' key={`category-${index1}`}>
+        <Fade bottom>
           <h4 className='mb-3 font-weight-medium'>{category.name}</h4>
           <div className='container-grid'>
             {category.items.map((item, index2) => {
@@ -51,8 +51,8 @@ export default function Categories({ data }) {
               );
             })}
           </div>
-        </section>
-      </Fade>
+        </Fade>
+      </section>
     );
   });
 }
