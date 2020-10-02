@@ -52,6 +52,7 @@ ol.stepper {
 
     &.active {
       &:after {
+        content: '';
         z-index: -1;
         background: $white;
         border: 1px solid $stepperMainColor;
