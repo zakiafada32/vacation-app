@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { withRouter } from 'react-router-dom';
 import propTypes from 'prop-types';
 
 import Button from 'elements/Button';
@@ -81,45 +81,45 @@ class BookingForm extends Component {
     const { itemDetails } = this.props;
 
     return (
-      <div className='card bordered' style={{ padding: '60px 80px' }}>
-        <h4 className='mb-3'>Start Booking</h4>
-        <h5 className='h2 text-teal mb-4'>
+      <div className="card bordered" style={{ padding: '60px 80px' }}>
+        <h4 className="mb-3">Start Booking</h4>
+        <h5 className="h2 text-teal mb-4">
           ${itemDetails.price}{' '}
-          <span className='text-gray-500 font-weight-light'>
+          <span className="text-gray-500 font-weight-light">
             per {itemDetails.unit}
           </span>
         </h5>
 
-        <label htmlFor='duration'>How long you will stay?</label>
+        <label htmlFor="duration">How long you will stay?</label>
         <InputNumber
           max={30}
           suffix={' night'}
           isSuffixPlural
           onChange={this.updateData}
-          name='duration'
+          name="duration"
           value={data.duration}
         />
 
-        <label htmlFor='date'>Pick a date</label>
-        <InputDate onChange={this.updateData} name='date' value={data.date} />
+        <label htmlFor="date">Pick a date</label>
+        <InputDate onChange={this.updateData} name="date" value={data.date} />
 
         <h6
-          className='text-gray-500 font-weight-light'
+          className="text-gray-500 font-weight-light"
           style={{ marginBottom: 40 }}
         >
           You will pay{' '}
-          <span className='text-gray-900'>
+          <span className="text-gray-900">
             ${itemDetails.price * data.duration} USD
           </span>{' '}
           per{' '}
-          <span className='text-gray-900'>
+          <span className="text-gray-900">
             {data.duration} {itemDetails.unit}
             {+data.duration > 1 ? 's' : ''}
           </span>
         </h6>
 
         <Button
-          className='btn'
+          className="btn"
           hasShadow
           isPrimary
           isBlock
@@ -137,4 +137,4 @@ BookingForm.propTypes = {
   startBooking: propTypes.func,
 };
 
-export default BookingForm;
+export default withRouter(BookingForm);
