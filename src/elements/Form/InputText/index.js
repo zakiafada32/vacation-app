@@ -43,10 +43,10 @@ export default function Text(props) {
 
   return (
     <div className={['input-text mb-3', outerClassName].join(' ')}>
-      <div className='input-group'>
+      <div className="input-group">
         {prepend && (
-          <div className='input-group-prepend bg-gray-900'>
-            <span className='input-group-text'>{prepend}</span>
+          <div className="input-group-prepend bg-gray-900">
+            <span className="input-group-text">{prepend}</span>
           </div>
         )}
         <input
@@ -59,12 +59,12 @@ export default function Text(props) {
           onChange={onChange}
         />
         {append && (
-          <div className='input-group-append bg-gray-900'>
-            <span className='input-group-text'>{append}</span>
+          <div className="input-group-append bg-gray-900">
+            <span className="input-group-text">{append}</span>
           </div>
         )}
       </div>
-      {HasError && <span className='error-helper'>{HasError}</span>}
+      {HasError && <span className="error-helper">{HasError}</span>}
     </div>
   );
 }

@@ -68,7 +68,6 @@ class Checkout extends Component {
   };
 
   render() {
-    console.log(this.props);
     const { data } = this.state;
     const { checkout, page } = this.props;
 

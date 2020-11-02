@@ -20,12 +20,9 @@ class LandingPage extends Component {
   componentDidMount() {
     document.title = 'Vacation | Home';
     window.scrollTo(0, 0);
-    console.log(`${process.env.REACT_APP_HOST}/api/v1/member/landing-page`);
+
     if (!this.props.page.landingPage)
-      this.props.fetchPage(
-        `${process.env.REACT_APP_HOST}/api/v1/member/landing-page`,
-        'landingPage'
-      );
+      this.props.fetchPage(`/landing-page`, 'landingPage');
   }
 
   render() {

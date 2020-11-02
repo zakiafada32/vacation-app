@@ -21,7 +21,7 @@ class TestInput extends React.Component {
       <InputDate
         max={30}
         onChange={this.handleChange}
-        name='value'
+        name="value"
         value={this.state.value}
       />
     );

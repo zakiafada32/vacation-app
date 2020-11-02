@@ -2,7 +2,6 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 export default function FeaturedImage({ data }) {
-  console.log(data, process.env.REACT_APP_HOST);
   return (
     <section className="container">
       <div className="container-grid sm">

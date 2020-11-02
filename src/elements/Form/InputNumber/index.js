@@ -47,9 +47,9 @@ export default function Number(props) {
   };
   return (
     <div className={['input-number mb-3', props.outerClassName].join(' ')}>
-      <div className='input-group'>
-        <div className='input-group-prepend'>
-          <span className='input-group-text minus' onClick={minus}>
+      <div className="input-group">
+        <div className="input-group-prepend">
+          <span className="input-group-text minus" onClick={minus}>
             -
           </span>
         </div>
@@ -59,15 +59,15 @@ export default function Number(props) {
           max={max}
           name={name}
           // pattern='[0-9]*'
-          className='form-control'
+          className="form-control"
           placeholder={placeholder ? placeholder : '0'}
           value={`${prefix}${value}${suffix}${
             isSuffixPlural && value > 1 ? 's' : ''
           }`}
           onChange={onChange}
         />
-        <div className='input-group-append'>
-          <span className='input-group-text plus' onClick={plus}>
+        <div className="input-group-append">
+          <span className="input-group-text plus" onClick={plus}>
             +
           </span>
         </div>
