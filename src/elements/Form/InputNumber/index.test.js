@@ -1,10 +1,10 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import InputNumber from "./index";
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import InputNumber from './index';
 
 class TestInput extends React.Component {
   state = {
-    value: "",
+    value: '',
   };
 
   handleChange = (e) => {
@@ -32,16 +32,16 @@ const setup = () => {
   };
 };
 
-test("Should able to change value", () => {
+test('Should able to change value', () => {
   const { input } = setup();
 
   fireEvent.change(input, { target: { value: 23 } });
-  expect(input.value).toBe("23");
+  expect(input.value).toBe('23');
 });
 
-test("Should not be able to change when reach max value", () => {
+test('Should not be able to change when reach max value', () => {
   const { input } = setup();
 
   fireEvent.change(input, { target: { value: 33 } });
-  expect(input.value).toBe("");
+  expect(input.value).toBe('');
 });

@@ -13,7 +13,7 @@ export default function Star({ className, value, height, width, spacing }) {
     leftPos = leftPos + width;
     star.push(
       <div
-        className='star'
+        className="star"
         key={`star-${index}`}
         style={{
           left: index * width,
@@ -27,7 +27,7 @@ export default function Star({ className, value, height, width, spacing }) {
   if (decimals > 0 && value <= 5)
     star.push(
       <div
-        className='star'
+        className="star"
         key={`starWithDecimal`}
         style={{
           left: leftPos,
@@ -41,7 +41,7 @@ export default function Star({ className, value, height, width, spacing }) {
   for (let index = 0; index < 5; index++) {
     starPlaceholder.push(
       <div
-        className='star placeholder'
+        className="star placeholder"
         key={`starPlaceholder-${index}`}
         style={{
           left: index * width,

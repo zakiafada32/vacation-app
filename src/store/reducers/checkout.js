@@ -1,4 +1,4 @@
-import { CHECKOUT_BOOKING } from "../types";
+import { CHECKOUT_BOOKING } from '../types';
 
 const initialState = null;
 
