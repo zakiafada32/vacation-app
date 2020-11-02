@@ -40,7 +40,6 @@ export default function Date(props) {
   };
 
   const check = (focus) => {
-    console.log(focus);
     focus.indexOf(1) < 0 && setIsShowed(false);
   };
 
@@ -53,23 +52,23 @@ export default function Date(props) {
       ref={refDate}
       className={['input-date mb-3', props.outerClassName].join(' ')}
     >
-      <div className='input-group'>
-        <div className='input-group-prepend bg-gray-900'>
-          <span className='input-group-text'>
-            <img src={iconCalendar} alt='icon calendar' />
+      <div className="input-group">
+        <div className="input-group-prepend bg-gray-900">
+          <span className="input-group-text">
+            <img src={iconCalendar} alt="icon calendar" />
           </span>
         </div>
         <input
           readOnly
-          type='text'
-          className='form-control'
+          type="text"
+          className="form-control"
           value={displayDate}
           placeholder={placeholder}
           onClick={() => setIsShowed(!isShowed)}
         />
 
         {isShowed && (
-          <div className='date-range-wrapper'>
+          <div className="date-range-wrapper">
             <DateRange
               editableDateInputs={true}
               onChange={datePickerChange}
